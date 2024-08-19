@@ -1,2 +1,1 @@
-# com3800-2024
-interfaces, etc., for Fall 2024 project
+Information and starter code for students in COM 3800, Fall 2024
