@@ -1,0 +1,8 @@
+myapppwd.txt
+*.class
+.git
+**/target
+**/moss*
+**/submissions*
+**/.idea
+*.iml
