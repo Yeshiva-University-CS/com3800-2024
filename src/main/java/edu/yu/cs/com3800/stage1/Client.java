@@ -7,10 +7,16 @@ public interface Client {
     class Response {
         private int code;
         private String body;
+        private boolean cached;
 
         public Response(int code, String body) {
+            this(code, body, false);
+        }
+
+        public Response(int code, String body, boolean cached) {
             this.code = code;
             this.body = body;
+            this.cached = cached;
         }
 
         public int getCode() {
@@ -19,6 +25,10 @@ public interface Client {
 
         public String getBody() {
             return this.body;
+        }
+
+        public boolean getCached() {
+            return this.cached;
         }
     }
 
