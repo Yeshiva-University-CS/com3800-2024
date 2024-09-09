@@ -60,8 +60,8 @@ public class JavaRunner {
      */
     public String compileAndRun(InputStream in) throws IllegalArgumentException, IOException, ReflectiveOperationException {
         //check validity of inputstream
-        if (in == null || in.available() == 0) {
-            throw new IllegalArgumentException("input stream in null or empty");
+        if (in == null) {
+            throw new IllegalArgumentException("input stream in null");
         }
         byte[] bytes = in.readAllBytes();
         //compile it
