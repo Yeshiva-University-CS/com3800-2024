@@ -86,7 +86,9 @@ public class JavaRunner {
         if (!compile(this.targetDir, srcStr, dc)) {
             String errors = "";
             for (Diagnostic<? extends JavaFileObject> diagnostic : dc.getDiagnostics()) {
-                errors += String.format("Error on line %d, column %d in %s%n", diagnostic.getLineNumber(), diagnostic.getColumnNumber(), diagnostic.getSource().toUri());
+                if(diagnostic.getSource() != null){
+                    errors += String.format("Error on line %d, column %d in %s%n", diagnostic.getLineNumber(), diagnostic.getColumnNumber(), diagnostic.getSource().toUri());
+                }
             }
             throw new IllegalArgumentException("Code did not compile:\n" + errors);
         }
