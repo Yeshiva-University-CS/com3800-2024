@@ -3,6 +3,7 @@ package edu.yu.cs.com3800;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.Map;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**We are implemeting a simplfied version of the election algorithm. For the complete version which covers all possible scenarios, see https://github.com/apache/zookeeper/blob/90f8d835e065ea12dddd8ed9ca20872a4412c78a/zookeeper-server/src/main/java/org/apache/zookeeper/server/quorum/FastLeaderElection.java#L913
  */
@@ -18,7 +19,7 @@ public class LeaderElection {
      */
     private final static int maxNotificationInterval = 30000;
 
-    public LeaderElection(PeerServer server, LinkedBlockingQueue<Message> incomingMessages) {
+    public LeaderElection(PeerServer server, LinkedBlockingQueue<Message> incomingMessages, Logger logger) {
     }
 
     /**
