@@ -58,7 +58,7 @@ public class LeaderElection {
     }
 
     /*
-     * We return true if one of the following three cases hold:
+     * We return true if one of the following two cases hold:
      * 1- New epoch is higher
      * 2- New epoch is the same as current epoch, but server id is higher.
      */
