@@ -92,13 +92,13 @@ public class Stage3PeerServerDemo {
         for (Map.Entry<Long, InetSocketAddress> entry : peerIDtoAddress.entrySet()) {
             HashMap<Long, InetSocketAddress> map = (HashMap<Long, InetSocketAddress>) peerIDtoAddress.clone();
             map.remove(entry.getKey());
-            ZooKeeperPeerServerImpl server = new ZooKeeperPeerServerImpl(entry.getValue().getPort(), 0, entry.getKey(), map);
+            PeerServerImpl server = new PeerServerImpl(entry.getValue().getPort(), 0, entry.getKey(), map);
             this.servers.add(server);
             server.start();
         }
     }
 
     public static void main(String[] args) throws Exception {
-        new Stage3PeerServerRunnerTest();
+        new Stage3PeerServerDemo();
     }
 }
